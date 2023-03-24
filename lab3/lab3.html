@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 1</title>
+</head>
+<body>
+    <script>
+        // Hàm tính điểm trung bình sử dụng if else
+function tinhDiemTBifelse() {
+  let toan = parseFloat(prompt("Nhập điểm Toán:"));
+  let ly = parseFloat(prompt("Nhập điểm Lý:"));
+  let hoa = parseFloat(prompt("Nhập điểm Hóa:"));
+  let sinh = parseFloat(prompt("Nhập điểm Sinh:"));
+
+  if (isNaN(toan) || isNaN(ly) || isNaN(hoa) || isNaN(sinh)) { // Kiểm tra nếu có giá trị không phải số thực
+    console.log("Điểm nhập vào phải là số thực từ 0 đến 10!");
+    return;
+  }
+  
+  if (toan < 0 || toan > 10 || ly < 0 || ly > 10 || hoa < 0 || hoa > 10 || sinh < 0 || sinh > 10) { // Kiểm tra điều kiện đầu vào
+    console.log("Điểm nhập vào phải là số thực từ 0 đến 10!");
+    return;
+  }
+
+  // Tính điểm trung bình
+  let diemTB = (toan + ly + hoa + sinh) / 4;
+
+  // Xuất kết quả xếp loại
+  if (diemTB >= 9 && diemTB <= 10) {
+    console.log("Điểm trung bình: " + diemTB.toFixed(2) + ". Xếp loại: Giỏi");
+  } else if (diemTB >= 7) {
+    console.log("Điểm trung bình: " + diemTB.toFixed(2) + ". Xếp loại: Khá");
+  } else if (diemTB >= 5) {
+    console.log("Điểm trung bình: " + diemTB.toFixed(2) + ". Xếp loại: Trung bình");
+  } else {
+    console.log("Điểm trung bình: " + diemTB.toFixed(2) + ". Xếp loại: Yếu");
+  }
+}
+
+// Hàm tính điểm trung bình sử dụng switch case
+function tinhDiemTBswitch() {
+  let toan = parseFloat(prompt("Nhập điểm Toán:"));
+  let ly = parseFloat(prompt("Nhập điểm Lý:"));
+  let hoa = parseFloat(prompt("Nhập điểm Hóa:"));
+  let sinh = parseFloat(prompt("Nhập điểm Sinh:"));
+
+  if (isNaN(toan) || isNaN(ly) || isNaN(hoa) || isNaN(sinh)) { // Kiểm tra nếu có giá trị không phải số thực
+    console.log("Điểm nhập vào phải là số thực từ 0 đến 10!");
+    return;
+  }
+  
+  if (toan < 0 || toan > 10 || ly < 0 || ly > 10 || hoa < 0 || hoa > 10 || sinh < 0 || sinh > 10) { // Kiểm tra điều kiện đầu vào
+    console.log("Điểm nhập vào phải là số thực từ 0 đến 10!");
+    return;
+  }
+
+  // Tính điểm trung bình
+  let diemTB = (toan + ly + hoa + sinh) / 4;
+
+  // Tính xếp loại
+  let xepLoai = "";
+  switch (true) {
+    case diemTB >= 9 && diemTB <= 10:
+      xepLoai = "Giỏi";
+      break;
+    case diemTB >= 7:
+      xepLoai = "Khá";
+      break;
+    case diemTB >= 5:
+      xepLoai = "Trung bình";
+      break;
+    default:
+      xepLoai = "Yếu";
+      break;
+  }
+
+  // Xuất kết quả
+  console.log("Điểm trung bình: " + diemTB.toFixed(2) + ". Xếp loại: " + xepLoai);
+}
+
+// Hàm main để chạy menu
+function main() {
+  while (true) {
+    let choice = prompt("MENU:\n1. Tính điểm trung bình (if else)\n2. Tính điểm trung bình (switch case)\n0. Thoát");
+    switch (choice) {
+      case "1":
+        tinhDiemTBifelse();
+        break;
+      case "2":
+        tinhDiemTBswitch();
+        break;
+      case "0":
+        console.log("Thoát chương trình");
+        return;
+      default:
+        console.log("Lựa chọn không hợp lệ");
+    }
+  }
+}
+
+// Chạy chương trình
+main();
+    </script>
+</body>
+</html>
