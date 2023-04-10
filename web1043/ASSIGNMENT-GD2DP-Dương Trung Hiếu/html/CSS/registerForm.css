@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    color: black;
+}
+.container{
+    width: 50%;
+    margin: auto;
+}
+.form-group{
+    margin: 7px;
+    display: block;
+}
+.form-label{
+    width: 100px;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.form-control, 
+.form-control-checkbox,
+.form-control-select,
+.form-control-textarea{
+    padding: 5px 10px;
+    border: 1px solid aqua;
+}
+.form-control, .form-control-select, .form-control-textarea{
+    width: 100%;
+}
+.form-control-textarea{
+    height: 100px;
+}
+.form-control-checkbox,
+.form-control-radio{
+    display: inline-block;
+    margin-right: 5px;
+}
+.form-control:focus,
+.form-control-checkbox:focus,
+.form-control-select:focus,
+.form-control-radio:focus,
+.form-control-textarea:focus{
+    outline: none !important;
+    order: 1px solid red;
+    box-shadow: 0 0 10px greenyellow;
+}
+.title{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: blue;
+}
+.btn{
+    border-radius: 10px;
+    height: 35px;
+    width: 70px;
+    background-color: aquamarine;
+    box-shadow: 2px 3px pink;
+    border: 1px solid palevioletred;
+    cursor: pointer;
+    color: white;
+}
+.btn:hover{
+    background-color: aqua;
+    box-shadow: 2px 3px greenyellow;
+    cursor: pointer;
+}
+.btns{
+    text-align: center;
+}
+.border-group{
+    border: 1px solid rgb(191, 221, 68);
+    padding: 8px;
+    width: 100%;
+}
+.invalid{
+    background: yellow url("../image/icon-.png") no-repeat 97% center;
+}
+.invalid-rc{
+    border: 1px solid yellow !important;
+    box-shadow: 0 0 10px yellow;
+}
+.valid{
+    color: blue !important;
+    background: aqua url("../image/Accept-icon.png") no-repeat 97% center !important;
+}

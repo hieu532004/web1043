@@ -1,0 +1,48 @@
+.slider{
+    margin-top: 200px;
+    width: 700px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.slider #prev,
+.slider #next{
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    font-size: 35px;
+    border: none;
+    color: rgb(59, 218, 230);
+    top: 50%;
+    cursor: pointer;
+}
+.slider #next{
+    left: 94%;
+}
+
+.slider #prev:hover,
+.slider #next:hover{
+    background-color: red;
+}
+.item{
+    display: none;
+}
+.item.active{
+    display: block;
+}
+.item img{
+    width: 700px;
+    height: 500px;
+    animation: zoom 1s ease;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

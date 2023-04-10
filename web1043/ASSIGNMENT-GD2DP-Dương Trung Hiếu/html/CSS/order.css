@@ -1,0 +1,50 @@
+.container{
+   background-color: whitesmoke;
+    margin: auto;
+    width: 50%;
+}
+.title{
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+table, th, td, tr{
+    border: 1px solid rgb(89, 135, 252);
+    border-collapse: collapse;
+    padding: 5px;
+}
+thead{
+    background-color: aqua;
+    color: black;
+}
+tr:nth-child(even){
+    background-color: #dcdede;
+}
+table{
+    width: 100%;
+}
+.checkColumn{
+    width: 40px;
+    text-align: center;
+}
+.nameColumn{
+    width: 40%;
+    text-align: center;
+}
+.priceColumn{
+    width: 10%;
+}
+.qtyColumn{
+    width: 30%;
+}
+.totalLable{
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+.amount, .total{
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}

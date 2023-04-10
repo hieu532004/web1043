@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        video {
+            width: 100%;
+            max-width: 640px;
+        }
+
+        button {
+            background-color:#4CAF50;
+            border: 2px solid black;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+}
+        input[type=range] {
+            width: 100%;
+            max-width: 640px;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 8.4px;
+            background: #ddd;
+            border: none;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <video id="myVideo" width="320" height="240" controls>
+        <source src="./Optimus Prime - Phim biến hình mới _ Jurassic World 2 - Blue so với The Indoraptor _ YOU TV.mp4" type="video/mp4">
+    </video>
+    <br>
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+    <button onclick="stopVideo()">Stop</button>
+    <br>
+    <button onclick="increaseVolume()">Volume +</button>
+    <button onclick="decreaseVolume()">Volume -</button>
+    <br>
+    <label for="loop">Phát lại:</label>
+    <input type="checkbox" id="loop" name="loop" onclick="toggleLoop()">
+
+    <script>
+        var vid = document.getElementById("myVideo");
+
+        function playVideo() {
+            vid.play();
+        }
+
+        function pauseVideo() {
+            vid.pause();
+        }
+
+        function stopVideo() {
+            vid.pause();
+            vid.currentTime = 0;
+        }
+
+        function increaseVolume() {
+            if (vid.volume < 1) {
+                vid.volume += 0.1;
+            }
+        }
+
+        function decreaseVolume() {
+            if (vid.volume > 0) {
+                vid.volume -= 0.1;
+            }
+        }
+
+        function toggleLoop() {
+            vid.loop = !vid.loop;
+        }
+    </script>
+</body>
+</html

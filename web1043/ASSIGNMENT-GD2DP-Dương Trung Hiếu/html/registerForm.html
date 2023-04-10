@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/registerForm.js"></script>
+    <link rel="stylesheet" href="CSS/registerForm.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">ĐĂNG KÝ THÀNH VIÊN</div>
+        <hr>
+        <div class="form">
+            <form action="">
+                <div class="form-group">
+                    <label for="" class="form-lable">Mã sinh viên</label>
+                    <input id="studentID" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-lable">Họ và tên</label>
+                    <input id="name" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-lable">Email</label>
+                    <input id="email" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-lable">Giới tính:</label>
+                    <div class="border-group">
+                    <input id="" type="radio" class="form-control-radio" name="gender" value="Male">Nam
+                    <input id="" type="radio" class="form-control-radio" name="gender" value="Female">Nữ
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-lable">Sở thích:</label>
+                    <div class="border-group">
+                        <input type="checkbox" name="favorites[]" id="" value="ds" class="form-control-checkbox">Đọc sách
+                        <input type="checkbox" name="favorites[]" id="" value="dl" class="form-control-checkbox">Du lịch
+                        <input type="checkbox" name="favorites[]" id="" value="ms" class="form-control-checkbox">Âm nhạc
+                        <input type="checkbox" name="favorites[]" id="" value="am" class="form-control-checkbox">Ẩm thực
+                        <input type="checkbox" name="favorites[]" id="" value="or" class="form-control-checkbox">Khác
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-lable">Quốc tịch</label>
+                    <select name="" id="nationality" class="form-control-select">
+                        <option value="">Lựa chọn quốc tịch</option>
+                        <option value="vi">Việt Nam</option>
+                        <option value="vi">Nhật Bản</option>
+                        <option value="vi">Hàn Quốc</option>
+                        <option value="vi">Úc</option>
+                        <option value="vi">Mỹ</option>
+                        <option value="vi">Trung Quốc</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-lable">Ghi chú:</label>
+                    <textarea name="" id="note" cols="10" rows="10" class="form-control-textarea"></textarea>
+                </div>
+                <div class="btns">
+                    <button type="button" style="width: 100px; height: 50px ;" class="btn" onclick="validate()"><b>Đăng ký</b></button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
